@@ -17,4 +17,10 @@ public class Hero extends Character {
     public Hero() {
     }
 
+    // 引数ありのコンストラクタ
+    public Hero(String name, int hp, int offense, int defense, int weapon) {
+        super(name, hp, offense, defense); // スーパークラス(Character)のコンストラクタを呼び出し
+        this.weapon = weapon;
+    }
+
 }
