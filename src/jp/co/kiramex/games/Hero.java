@@ -1,6 +1,6 @@
 package jp.co.kiramex.games;
 
-public class Hero extends Character {
+public class Hero extends Character implements MagicAttack {
     private int weapon; // 武器の強さ
 
     // getter
@@ -40,4 +40,14 @@ public class Hero extends Character {
             System.out.println("ミス！ " + super.getName() + " は " + opponent.getName() + " にダメージを与えられない！");
         }
     }
+
+    // 魔法攻撃
+    @Override
+    public void magic_attack(Character opponent) {
+        // 5 の固定ダメージ
+        int damage = 5;
+        opponent.setHp(opponent.getHp() - damage);
+        System.out.println(this.getName() + "は魔法で" + opponent.getName() + "に" + damage + "のダメージを与えた！");
+    }
+
 }

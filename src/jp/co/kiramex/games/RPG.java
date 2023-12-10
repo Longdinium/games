@@ -15,7 +15,8 @@ public class RPG {
         Hero hero = new Hero("勇者", 10, 5, 3, 1);
         Enemy slime = new Enemy("スライム", 5, 2, 2, "スライム");
 
-        hero.attack(slime);     // 勇者 が スライム に攻撃する
-        slime.attack(hero);     // スライム が 勇者 に攻撃する
+        //hero.attack(slime);     // 勇者 が スライム に攻撃する
+        //slime.attack(hero);     // スライム が 勇者 に攻撃する
+        hero.magic_attack(slime); // 勇者が が スライム に魔法攻撃する attack内の引数はopponent
     }
 }
